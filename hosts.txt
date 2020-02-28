@@ -1,0 +1,3 @@
+princeton.edu
+apple.com 
+oit.princeton.edu
