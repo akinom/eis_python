@@ -2,12 +2,19 @@
 # --> https://stackoverflow.com/questions/19196105/how-to-check-if-a-network-port-is-open-on-linux
 import socket
 
+host = 'appel.com'
+port = 80
+
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.settimeout(1)
-result = sock.connect_ex(('127.0.0.1', 80))
+result = sock.connect_ex((host, port))
+print(result)
 if result == 0:
-    print("Port is open")
+    state = 'open'
+elif result == socket.errno.EAGAIN:
+    state = 'timeout'
 else:
-    print("Port is not open")
-sock.close()
+    state = 'closed'
+print('port {prt} at {hst} is {st}'.format(prt=port, hst=host, st=state))
+
 
