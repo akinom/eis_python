@@ -1,10 +1,12 @@
+import socket
+
 def open_file():
     # fname = input("enter log file name> ")
     fname = 'resources/apache_logs'
     fd = open(fname, "r")
     return fd
 
-def main():
+def mainv7():
     #print actions and ips
     fd = open_file()
     for line in fd.readlines():
@@ -76,9 +78,49 @@ def mainv4():
         input('enter for next')
 
 
-v = 4
-if (v > 2):
+def main():
+    fname = 'resources/apache_logs'
+    fd = open(fname, "r")
+    for line in fd.readlines():
+        # ip == text up to first blank
+        ip = line[0: line.find(' ')]
+        dname, _, _ = socket.gethostbyaddr(ip)
+        print(dname, ' | ' , line, end='')
+
+def mainv24():
+    fname = 'resources/apache_logs'
+    fd = open(fname, "r")
+    for line in fd.readlines():
+        # index of first blank
+        idx_blank = line.find(' ')
+        ip = line[0:idx_blank]
+        dname, _, _ = socket.gethostbyaddr(ip)
+        print(dname, ' | ' , line, end='')
+
+def mainv23():
+    fname = 'resources/apache_logs'
+    fd = open(fname, "r")
+    for line in fd.readlines():
+        # index of first blank
+        idx_blank = line.find(' ')
+        ip = line[0:idx_blank]
+        dname, _, _ = socket.gethostbyaddr(ip)
+        print(dname, ip , ' ' , line)
+        input("eyeball")
+
+v = 23
+
+if (v > 3):
     main()
+
+
+if (v == 3):
+    # help(socket.gethostbyaddr)
+    while (True):
+        ip = input('enter a valid ip addr> ')
+
+        dname, _, _ = socket.gethostbyaddr(ip)
+        print(ip, ' -> ' , dname)
 
 if (v ==2):
     #just print ips
