@@ -75,7 +75,7 @@ You'll need PyCharm when you start coding more seriously. Intially you'll be fin
 The first time you start PyCharm you ned to configure a Python Interpreter. There will be a message with a link at the top right of the window, 
 Click on it and make sure you add the python interpreter for version3.
 
-[PyCharm Dialog][./doc/PyCharm-config-python.png]
+![PyCharm Dialog](./doc/PyCharm-config-python.png)
 
 
 ## Useful Links 
