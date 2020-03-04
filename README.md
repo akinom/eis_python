@@ -70,10 +70,11 @@ The above command should open a browser window on localhost that shows a list of
 
 ## PyCharm 
 
-You'll need PyCharm when you start coding more seriously. Intially you'll be fine with notesbooks and ipython. 
+You'll need PyCharm when you start coding more seriously. Initially you'll be fine with notesbooks and ipython. 
 
 The first time you start PyCharm you ned to configure a Python Interpreter. There will be a message with a link at the top right of the window, 
-Click on it and make sure you add the python interpreter for version3.
+Click on it and make sure you add the python interpreter for version3 as the Base Interpreter. Leave the LOcation field as it is suggested. 
+It is a path relative to the root of your project.
 
 ![PyCharm Dialog](./doc/PyCharm-config-python.png)
 
