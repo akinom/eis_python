@@ -62,11 +62,16 @@ git
 
 ## Start the jupyter notebook application 
 
-Clone this project from github, https://github.com/akinom/eis_python and change into the project directory.
+[Jupyter Notebooks](https://www.dataquest.io/blog/jupyter-notebook-tutorial/)  
+is a nice introduction to Jupyter Notebooks.  
+Please have a quick read. 
+
+After you clone this project and after installation, change into the project directory and run:
 ~~~
 jupyter notebook  lesson_books 
 ~~~ 
-The above command should open a browser window on localhost that shows a list of notebook files ending in .ipnyb. 
+The above command should open a browser window on localhost that shows the files in this directory.
+Cick on one of the *ipynb files and start working with the notebook. 
 
 ## PyCharm 
 
