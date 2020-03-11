@@ -1,3 +1,5 @@
+nogit/ 
+
 #python specific 
 __pycache__ 
 *.pyc 
